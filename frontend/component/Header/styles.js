@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 200,
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
 
   },
   logo: {
