@@ -6,7 +6,9 @@ const Header = () => {
     return (
         <View style={styles.container}>
         <Image style={styles.logo} source={require('../../assets/Images/logo.png')}/>
-        
+        <View>
+        <Text style={styles.range}>Range Per Charge</Text>
+        </View>
         </View>
     )
 }

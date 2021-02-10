@@ -6,16 +6,18 @@ const Tesla = require('../models/car')
 router.post('/', (req, res) => {
 
     const tesla = new Tesla({
-        model: req.body.model,
-        battery: req.body.battery,
-        range: req.body.range
+        model: req.body.model
+        // model: req.body.model,
+        // battery: req.body.battery,
+        // range: req.body.range
     })
+
 
     tesla.save()
         .then(results => {
             res.send({
                 message: 'Tesla car data created successfully',
-                data: results
+                data: results.data
             })
         })
         .catch(err => console.log(err))

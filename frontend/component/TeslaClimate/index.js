@@ -1,13 +1,14 @@
 import React from 'react';
 import {View, Image, Text} from 'react-native';
 import styles from './styles';
+import AcOff from '../../assets/climate/ac-off.svg';
 
 const Climate = () => {
     return (
         <View style={styles.container}>
-            {/* <Image 
-            source={require('../../assets/climate/ac-off.svg')}
-            style={styles.acOn} /> */}
+            <AcOff
+            style={styles.acOff}
+            width={120} height={40} />
 
             <Text>Climate</Text>
         </View>
