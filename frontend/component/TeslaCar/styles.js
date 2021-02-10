@@ -2,22 +2,24 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create({
     carContainer: {
-        width: '100%',
-        height: Dimensions.get('window').height,
+      position: 'relative',
+      width: '100%',
+      height: 230,
+      top: 10,
+      // backgroundColor: 'yellow',
+      marginBottom: 10,
       },
-    //   stage: {
-    //     top: 0,
-    //     width: '100%',
-    //     height: '50%',
-    //     resizeMode: 'cover',
-    //     position: 'absolute',
-        
-    //   },
       tesla: {
-          top: 300,
-          marginTop: -50,
+          width: 430,
           height: 230,
           resizeMode: 'contain',
+         
+      }, 
+      text: {
+        top: -50,
+        position: 'relative', 
+        textAlign: 'center',
+
       }
 });
 

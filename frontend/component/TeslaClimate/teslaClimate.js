@@ -9,8 +9,7 @@ const Climate = () => {
             <AcOff
             style={styles.acOff}
             width={120} height={40} />
-
-            <Text>Climate</Text>
+            <Text style={styles.text}>Climate</Text>
         </View>
     )
 }

@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View, SafeAreaView, FlatList, ActivityIndicator } from 'react-native';
-import Header from './component/Header';
+import Header from './component/Header/header';
 import BatteryContainer from './containers'
 // import TeslaCar from './component/TeslaCar';
 

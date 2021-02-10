@@ -6,7 +6,8 @@ const Tesla = require('../models/car')
 router.post('/', (req, res) => {
 
     const tesla = new Tesla({
-        model: req.body.model
+        models: req.body.models
+        // id: req.body.id,
         // model: req.body.model,
         // battery: req.body.battery,
         // range: req.body.range

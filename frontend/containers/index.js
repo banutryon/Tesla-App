@@ -1,25 +1,29 @@
 import React from 'react';
-import {View, Image, Text, SafeAreaView} from 'react-native';
+import {View, Image, Text, SafeAreaView,ScrollView} from 'react-native';
 import styles from './styles';
-import TeslaCar from '../component/TeslaCar';
-import TeslaClimate from '../component/TeslaClimate';
-import TeslaCounter from '../component/TeslaCounter';
-import TeslaNotice from '../component/TeslaNotice';
-import TeslaStats from '../component/TeslaStats';
-import TeslaWheels from '../component/TeslaWheels';
+import TeslaCar from '../component/TeslaCar/teslaCar';
+import TeslaClimate from '../component/TeslaClimate/teslaClimate';
+import TeslaCounter from '../component/TeslaCounter/teslaCounter';
+import TeslaNotice from '../component/TeslaNotice/teslaNotice';
+import TeslaStats from '../component/TeslaStats/teslaStats';
+import TeslaWheels from '../component/TeslaWheels/teslaWheels';
 
 const BatteryContainer = () => {
     return (
-        <SafeAreaView >
+        <View >
+            <ScrollView>
             <View style={styles.container}>
+            
             <TeslaCar />
             <TeslaClimate />
             <TeslaCounter />
             <TeslaNotice />
             <TeslaStats />
             <TeslaWheels />
+            
             </View>
-        </SafeAreaView>
+            </ScrollView>
+        </View>
        
     )
 }

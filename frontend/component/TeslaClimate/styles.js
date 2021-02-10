@@ -1,14 +1,27 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create({
-    carContainer: {
+    container: {
         width: '100%',
-        height: Dimensions.get('window').height,
-        
+        height: 100,
+        top: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        // backgroundColor: 'green',
+       
       },
       acOff: {
-          position: 'relative', 
-          top: -400,
+          position: 'absolute', 
+          top: -20,
+          marginTop: 10,
+         
+      }, 
+      text: {
+        position: 'absolute',
+        color: 'black',
+        fontSize: 20,
+        
+
       }
 });
 

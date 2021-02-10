@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { StyleSheet, Text, View, SafeAreaView, FlatList, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, FlatList, ActivityIndicator, Image } from 'react-native';
 import styles from './styles';
 
 const teslaURL = 'http://localhost:3000/api/tesla-info';
@@ -9,18 +9,22 @@ const TeslaCar = () => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    fetch(teslaURL)
-      .then((response) => response.json())
-      .then((json) => setData(json.model))
-      .catch((error => alert(error))
-      .finally(setLoading(false))
-  })
+  // useEffect(() => {
+  //   fetch(teslaURL)
+  //     .then((response) => response.json())
+  //     .then((json) => setData(json.model))
+  //     .catch((error => alert(error))
+  //     .finally(setLoading(false))
+  // });
     return (
         <SafeAreaView style={styles.carContainer}>
+          
           <Image 
           source={require('../../assets/Images/m3.jpeg')}
           style={styles.tesla} />
+          <View>
+            <Text style={styles.text}>Test</Text>
+          </View>
           {/* {isLoading ? (
           <ActivityIndicator />
            ) : (
