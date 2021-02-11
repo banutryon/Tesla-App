@@ -5,9 +5,9 @@ import Header from './component/Header/header';
 import BatteryContainer from './containers'
 // import TeslaCar from './component/TeslaCar';
 
-const teslaURL = 'http://localhost:3000/api/tesla-info';
+// const teslaURL = 'http://localhost:3000/api/tesla-info';
 export default function App() {
-  const [isLoading, setLoading] = useState(true);
+  // const [isLoading, setLoading] = useState(true);
   return (
     <SafeAreaView style={styles.container}>
       <Header />
