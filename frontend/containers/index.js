@@ -17,10 +17,10 @@ const BatteryContainer = () => {
             <TeslaCar />
             <TeslaClimate />
             <TeslaCounter />
-            <TeslaNotice />
+            
             <TeslaStats />
             <TeslaWheels />
-            
+            <TeslaNotice />
             </View>
             </ScrollView>
         </View>

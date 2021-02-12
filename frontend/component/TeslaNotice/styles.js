@@ -5,6 +5,12 @@ const styles = StyleSheet.create({
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
+        margin: 20,
+        fontSize: 8,
+        
+      },
+      notice: {
+        color: '#2b2d42',
       }
       
 });

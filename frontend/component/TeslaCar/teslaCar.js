@@ -40,6 +40,8 @@ const TeslaCar = () => {
           <Text>{data[0].models[1].ETArange}</Text>
           <Text>{data[0].models[2].battery}</Text>
           <Text>{data[0].models[1].ETArange}</Text>
+          
+          
 
        
           
