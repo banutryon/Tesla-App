@@ -26,25 +26,17 @@ const BatteryContainer = (props) => {
             }
         })
         .then(response => { return response.json();})
-        .then(responseData => {console.log(responseData); return responseData;})
+        // .then(responseData => {console.log(responseData); return responseData;})
         .then(data => {setData(data)})
-        .catch(err => {
-            // console.log("fetch error" + err);
-            // console.log(data[0].config[0].spec)
-        });
+        // .catch(err => {
+        //     console.log("fetch error" + err);
+        // });
     }
          , []);
-         const wheelsize = () => {
-            if (config.wheels === 19) {
-              return '../../assets/Wheels/wheel-19.png'
-            } else {
-              return '../../assets/Wheels/wheel-21.png'
-            }
-        
-        
-            }
-            console.log(config.wheels)
-        
+         
+        //  console.log(data[0].config[0].spec["19"])
+         console.log(data)
+
         // const modelS = data[0].models[0].model
         // const sLR = data[0].models[0].battery
         // const sEtaLong = data[0].models[0].ETArange
@@ -55,20 +47,21 @@ const BatteryContainer = (props) => {
         // const climate40 = data[0].config[0].spec["19"].Off.speed["40"]
         // const speed = data[0].config[0].spec["19"].Off.speed
         // const wheelsize = data[0].config[0].spec["19"].Off.speed["40"]
-
+        // const wheel = data[0].config[0].spec["19"]
     
     return (
         <SafeAreaView style={styles.teslaBattery}>
             
             <View style={styles.container}>
-            {/* <Text>Model {modelS}</Text> */}
 
-            <TeslaCar wheelsize={wheelsize} />
+            <TeslaCar wheelsize={config.wheels} />
             {/* <TeslaClimate />
-            <TeslaCounter />
+            <TeslaCounter /> */}
             
-            <TeslaStats />
-            <TeslaWheels /> */}
+            <TeslaStats carstats={data} />
+            {/* <TeslaWheels /> */}
+            {/* <Text>{wheel}</Text> */}
+
             <TeslaNotice />
             </View>
             
