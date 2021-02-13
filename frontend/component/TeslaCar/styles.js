@@ -1,25 +1,31 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create({
-    carContainer: {
-      position: 'relative',
+    
+    teslaCar: {
       width: '100%',
-      height: 230,
-      top: 10,
-      // backgroundColor: 'yellow',
-      marginBottom: 10,
+      minHeight: 230,
+      bottom: 50,
+      
       },
-      tesla: {
-          width: 430,
-          height: 230,
-          resizeMode: 'contain',
+      teslaWheels: {
+        height: 100,
+        width: 100,
+        position: 'relative',
+        justifyContent: 'center',
          
       }, 
-      text: {
-        top: -50,
-        position: 'relative', 
-        textAlign: 'center',
-
+      teslaWheel: {
+        height: 53,
+        width: 53,
+        top: 110,
+        position: 'absolute',
+      }, 
+      front: {
+        left: 67,
+      },
+      rear: {
+        right: 77,
       }
 });
 

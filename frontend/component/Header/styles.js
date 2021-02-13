@@ -3,10 +3,10 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    justifyContent: 'center',
     alignItems: 'center',
-    height: 200,
-    // backgroundColor: 'red',
+    padding: 25,
+    position: 'absolute',
+    top: -30,
 
   },
   logo: {
@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
   range: {
     justifyContent: 'center',
     fontSize: 26,
-    fontWeight: '500',
-    marginTop: -30,
+    fontWeight: '300',
+    marginTop: -15,
   },
 });
 
