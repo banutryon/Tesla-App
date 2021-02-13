@@ -15,7 +15,10 @@ const BatteryContainer = (props) => {
 
     // const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState([]);
-    const [config, setconfig] = useState({speed: 55, temp: 20, climate: true, wheels: 19})
+    
+        const [carstats,setCarstats] = useState([]);
+        const [config, setConfig] = useState({speed: 55, temp: 20, climate: true, wheels: 19})
+        
         // fetching the data
         useEffect(()=>{
           fetch('https://tesla-app-api.herokuapp.com/api/tesla-info', {
@@ -34,8 +37,8 @@ const BatteryContainer = (props) => {
     }
          , []);
          
-        //  console.log(data[0].config[0].spec["19"])
-         console.log(data)
+        //  console.log(data[0])
+         
 
         // const modelS = data[0].models[0].model
         // const sLR = data[0].models[0].battery
@@ -48,7 +51,21 @@ const BatteryContainer = (props) => {
         // const speed = data[0].config[0].spec["19"].Off.speed
         // const wheelsize = data[0].config[0].spec["19"].Off.speed["40"]
         // const wheel = data[0].config[0].spec["19"]
-    
+
+         const calculateStats = (models, value) => {
+            const dataModels = data;
+            return models.map(model => {
+            const { speed, temperature, climate, wheels } = value;
+            const miles = dataModels[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature];
+            return {
+                model,
+                miles
+            };
+            
+            });
+        }
+        console.log(calculateStats)
+
     return (
         <SafeAreaView style={styles.teslaBattery}>
             
@@ -58,7 +75,7 @@ const BatteryContainer = (props) => {
             {/* <TeslaClimate />
             <TeslaCounter /> */}
             
-            <TeslaStats carstats={data} />
+            <TeslaStats carstats={carstats} />
             {/* <TeslaWheels /> */}
             {/* <Text>{wheel}</Text> */}
 

@@ -3,15 +3,18 @@ import {View, Image, Text, FlatList} from 'react-native';
 import styles from './styles';
 
 const TeslaStats = (props) => {
-    // const listItems = props.data.map((stat) => {
-    //     <FlatList key={stat.model}>
-    //         <Text style={styles.teslaStatsIcon, styles.teslaStatsIcon.stat.model}></Text>
-    //         <Text>{stat.miles}</Text>
-    //     </FlatList>
-    // })
+    const listItems = props.carstats.map((stat) => {
+        <FlatList key={stat.model}>
+            <Text style={styles.teslaStatsIcon, styles.teslaStatsIcon.stat.model}></Text>
+            <Text>{stat.miles}</Text>
+        </FlatList>
+        console.log(stat)
+
+    })
+    console.log(listItems)
     return (
         <View style={styles.teslaStats}>
-            {/* <FlatList>{listItems}</FlatList> */}
+            <FlatList>{listItems}</FlatList>
         </View>
     )
 }
