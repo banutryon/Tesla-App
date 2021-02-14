@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     teslaCar: {
       width: '100%',
       minHeight: 230,
-      bottom: 50,
+      bottom: 120,
       
       },
       teslaWheels: {

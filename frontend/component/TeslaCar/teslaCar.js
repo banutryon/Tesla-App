@@ -4,10 +4,14 @@ import styles from './styles';
 import PropTypes from 'prop-types';
 
 const TeslaCar = (props) => {
+      TeslaCar.propTypes = {
+      wheelsize: PropTypes.number
+    }
+
 // let icon = 
     return (
       <View>
-      {/* <ImageBackground source={require('../../assets/Images/tesla.jpg')} style={styles.teslaCar}>
+      <ImageBackground source={require('../../assets/Images/tesla.jpg')} style={styles.teslaCar}>
        <View sytle={styles.teslaWheels}>
          <Image source={require('../../assets/Wheels/wheel-19.png')} style={[styles.teslaWheel, styles.front, props.wheelsize]}></Image>
          <Image source={require('../../assets/Wheels/wheel-19.png')} style={[styles.teslaWheel, styles.rear, props.wheelsize]}></Image>
@@ -15,14 +19,11 @@ const TeslaCar = (props) => {
          
       
           
-      </ImageBackground> */}
+      </ImageBackground>
       
 
       </View>
     );
-    TeslaCar.propTypes = {
-      wheelsize: React.PropTypes.number
-    }
 };
 
 export default TeslaCar;

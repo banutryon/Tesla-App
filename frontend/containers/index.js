@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Image, Text, SafeAreaView,ScrollView} from 'react-native';
+import {View, Image, Text, SafeAreaView,ScrollView,} from 'react-native';
 import styles from './styles';
 import TeslaCar from '../component/TeslaCar/teslaCar';
 import TeslaClimate from '../component/TeslaClimate/teslaClimate';
@@ -7,81 +7,133 @@ import TeslaCounter from '../component/TeslaCounter/teslaCounter';
 import TeslaNotice from '../component/TeslaNotice/teslaNotice';
 import TeslaStats from '../component/TeslaStats/teslaStats';
 import TeslaWheels from '../component/TeslaWheels/teslaWheels';
-import { render } from 'react-dom';
+import { getData } from '../service/seed';
+
 
 const BatteryContainer = (props) => {
+    const [carstats,setCarstats] = useState([]);
+    const [config, setConfig] = useState({speed: 65, temperature: 32, climate: true, wheels: 21})
 
-   
-
-    // const [isLoading, setLoading] = useState(true);
-    const [data, setData] = useState([]);
-    
-        const [carstats,setCarstats] = useState([]);
-        const [config, setConfig] = useState({speed: 55, temp: 20, climate: true, wheels: 19})
+    const calculateStats = (models, value) => {
+        const dataModels = getData();
+        return models.map(model => {
+        const { speed, temperature, climate, wheels } = value;
         
-        // fetching the data
-        useEffect(()=>{
-          fetch('https://tesla-app-api.herokuapp.com/api/tesla-info', {
-            method: 'GET',
-            headers: {
-            "Accept": "application/json",
-            'Content-Type': 'application/json'
-            }
-        })
-        .then(response => { return response.json();})
-        // .then(responseData => {console.log(responseData); return responseData;})
-        .then(data => {setData(data)})
-        // .catch(err => {
-        //     console.log("fetch error" + err);
-        // });
+        const miles = dataModels[model][wheels][climate === 'On' || 'Off'].speed[speed][temperature];
+        // console.log(dataModels[1])
+        console.log(models)
+        // console.log(miles)
+        return {
+            model,
+            miles
+        };
+        });
     }
-         , []);
-         
-        //  console.log(data[0])
-         
+    console.log(calculateStats)
+    const statsUpdate = () => {
+        const carModels = ['LongRange', 'Plaid', 'Plaid+'];
+    // Fetch model info from BatteryService and calculate then update state
+        setCarstats(calculateStats(carModels, config));
+        // console.log(carModels)
+    }
 
-        // const modelS = data[0].models[0].model
-        // const sLR = data[0].models[0].battery
-        // const sEtaLong = data[0].models[0].ETArange
-        // const sPlaid = data[0].models[1].battery
-        // const sEtaP = data[0].models[0].ETArange
-        // const sPlaidP = data[0].models[2].battery
-        // const sEtaPP = data[0].models[0].ETArange
-        // const climate40 = data[0].config[0].spec["19"].Off.speed["40"]
-        // const speed = data[0].config[0].spec["19"].Off.speed
-        // const wheelsize = data[0].config[0].spec["19"].Off.speed["40"]
-        // const wheel = data[0].config[0].spec["19"]
-
-         const calculateStats = (models, value) => {
-            const dataModels = data;
-            return models.map(model => {
-            const { speed, temperature, climate, wheels } = value;
-            const miles = dataModels[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature];
-            return {
-                model,
-                miles
-            };
-            
-            });
+    const updateCounterState = (title, newValue) => {
+        const config_ = { ...config };
+        // update config state with new value
+        title === 'Speed' ? config_['speed'] = newValue : config_['temperature'] =  newValue;
+        // update our state
+        setConfig(config_);
+    }
+   
+    
+     
+    const increment = (e, title) => {
+        e.preventDefault();
+        let currentValue, maxValue, step;
+        const { speed, temperature } = props.counterDefaultVal;
+        if (title === 'Speed') {
+          currentValue = config.speed;
+          maxValue = speed.max;
+          step = speed.step;
+        } else {
+          currentValue = config.temperature;
+          maxValue = temperature.max;
+          step = temperature.step;
         }
-        console.log(calculateStats)
+    
+        if (currentValue < maxValue) {
+          const newValue = currentValue + step;
+          updateCounterState(title, newValue);
+        }
+        
+        // console.log(currentValue)
+
+      }
+      const decrement = (e, title) => {
+        e.preventDefault();
+        let currentValue, minValue, step;
+        const { speed, temperature } = props.counterDefaultVal;
+        if (title === 'Speed') {
+          currentValue = config.speed;
+          minValue = speed.min;
+          step = speed.step;
+        } else {
+          currentValue = config.temperature;
+          minValue = temperature.min;
+          step = temperature.step;
+        }
+    
+        if (currentValue > minValue) {
+          const newValue = currentValue - step;
+          updateCounterState(title, newValue);
+        }
+      }
+
+        // handle aircon & heating click event handler
+        const handleChangeClimate = () => {
+            const config_ = {...config};
+            config_['climate'] = !config_.climate;
+            setState({ config_ }, () => {statsUpdate()});
+          };
+        
+          // handle Wheels click event handler
+          const handleChangeWheels = (size) => {
+            const config_ = {...config};
+            config_['wheels'] = size;
+            setState({ config_ }, () => {statsUpdate()});
+          }  
+
+          useEffect(()=>{
+            statsUpdate();
+        },[config])
 
     return (
         <SafeAreaView style={styles.teslaBattery}>
-            
-            <View style={styles.container}>
-
-            <TeslaCar wheelsize={config.wheels} />
-            {/* <TeslaClimate />
-            <TeslaCounter /> */}
-            
-            <TeslaStats carstats={carstats} />
-            {/* <TeslaWheels /> */}
-            {/* <Text>{wheel}</Text> */}
-
-            <TeslaNotice />
+            {/* <TeslaCar 
+            wheelsize={config.wheels}
+             /> */}
+            {/* <TeslaStats carstats={carstats} />  */}
+            <View style={styles.teslaControls}>
+            <TeslaCounter
+            currentValue={config.speed}
+            initValues={props.counterDefaultVal.speed}
+            increment={increment}
+            decrement={decrement} />
+            <View style={styles.teslaClimateContainer}>
+            {/* <TeslaCounter
+              currentValue={config.temperature}
+              initValues={props.counterDefaultVal.temperature}
+              increment={increment}
+              decrement={decrement} /> */}
+            {/* <TeslaClimate value={config.climate}
+              limit={config.temperature > 10}
+              handleChangeClimate={handleChangeClimate} /> */}
             </View>
-            
+            {/* <TeslaWheels 
+            value={config.wheels}
+            handleChangeWheels={handleChangeWheels}/> */}
+            </View>
+            {/* <TeslaNotice /> */}
         </SafeAreaView>
        
     )
@@ -89,3 +141,6 @@ const BatteryContainer = (props) => {
 }
 
 export default BatteryContainer;
+
+
+

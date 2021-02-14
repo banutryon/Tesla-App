@@ -3,15 +3,33 @@ import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View, SafeAreaView, FlatList, ActivityIndicator } from 'react-native';
 import Header from './component/Header/header';
 import BatteryContainer from './containers'
-// import TeslaCar from './component/TeslaCar';
 
-// const teslaURL = 'http://localhost:3000/api/tesla-info';
+const counterDefaultVal = {
+  speed: {
+    title: "Speed",
+    unit: "mph",
+    step: 5,
+    min: 45,
+    max: 70
+  },
+  temperature: {
+    title: "Outside Temperature",
+    unit: "°",
+    step: 10,
+    min: -10,
+    max: 40
+  }
+};
+
+
+
 export default function App() {
   // const [isLoading, setLoading] = useState(true);
   return (
     <SafeAreaView style={styles.container}>
       <Header />
-      <BatteryContainer />
+      <BatteryContainer counterDefaultVal={counterDefaultVal} />
+   
       
       <StatusBar style="auto" />
     </SafeAreaView>

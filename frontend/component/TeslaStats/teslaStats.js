@@ -1,24 +1,33 @@
 import React from 'react';
-import {View, Image, Text, FlatList} from 'react-native';
+import {View, Item,  Text, FlatList, SafeAreaView} from 'react-native';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
 const TeslaStats = (props) => {
-    const listItems = props.carstats.map((stat) => {
-        <FlatList key={stat.model}>
-            <Text style={styles.teslaStatsIcon, styles.teslaStatsIcon.stat.model}></Text>
-            <Text>{stat.miles}</Text>
-        </FlatList>
-        console.log(stat)
+    TeslaStats.propTypes = {
+    carstats: PropTypes.array
+  }
+   
 
-    })
-    console.log(listItems)
     return (
-        <View style={styles.teslaStats}>
-            <FlatList>{listItems}</FlatList>
-        </View>
+        <SafeAreaView style={styles.container}>
+     
+     <FlatList
+        horizontal
+        data={props.carstats}
+        keyExtractor={item => item.model}
+        renderItem={({ item }) => (
+          <View style={styles.listItem}>
+            <Text style={styles.listItemText}>{item.model}</Text>
+            <Text style={styles.listItemText}>{item.miles}</Text>
+          </View>
+          
+        )}
+      />
+    
+    </SafeAreaView>
     )
+    
 }
-// TeslaStats.propTypes = {
-//     carstats: React.PropTypes.array
-//   }
+
 export default TeslaStats;
