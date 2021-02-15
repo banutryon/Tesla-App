@@ -1,0 +1,102 @@
+
+ h1 {
+  font-family: 'RobotoNormal';
+    font-weight: 100;
+    font-size: 38px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: white;
+    padding-top: 10px;
+} 
+
+.tesla {
+  width: 1000px;
+  min-height: 350px;
+  background: url(../../assets/Images/ModelS.png) no-repeat top center;
+  background-size: contain;
+  background-position: center;
+  display: block;
+  margin: 60px auto 0 auto;
+  animation: 1s ease-out 0s 1 slideInFromRight;
+  /* background-image: url(../../assets/Images/ModelS.png); */
+}
+.img {
+  margin-top: -25px;
+  height: 450px;
+  width: 100%;
+  position:absolute;
+  z-index: -1;
+}
+
+
+.tesla-wheels {
+  height: 50px;
+  width: 555px;
+  position: relative;
+  margin: 0 auto; 
+}
+
+.wheel {
+  height: 93px;
+  width: 93px;
+  position: absolute;
+  background-size: cover;
+  margin-top: 180px; 
+}
+  .front {
+    left: 24px; }
+  .rear {
+    right: 42px; }
+  .wheel--19 {
+    background-image: url(../../assets/Wheels/wheel-19.png);
+    -webkit-animation: infinite-spinning 3000ms steps(8) infinite;
+    -moz-animation: infinite-spinning 300ms steps(8) infinite;
+    -o-animation: infinite-spinning 300ms steps(8) infinite;
+    animation: infinite-spinning 300ms steps(8) infinite; 
+  }
+  .wheel--21 {
+    background-image: url(../../assets/Wheels/wheel-21.png);
+    -webkit-animation: infinite-spinning 480ms steps(12) infinite;
+    -moz-animation: infinite-spinning 480ms steps(12) infinite;
+    -o-animation: infinite-spinning 480ms steps(12) infinite;
+    animation: infinite-spinning 480ms steps(12) infinite; 
+  }
+
+@keyframes infinite-spinning {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } 
+  }
+@-webkit-keyframes infinite-spinning {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } 
+  }
+
+    @keyframes slideInFromRight {
+      from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 10%;  
+    }
+    }
+    

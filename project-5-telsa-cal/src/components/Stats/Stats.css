@@ -1,0 +1,49 @@
+.stats {
+  margin: -10px 0 40px; 
+}
+/* ============================= */
+
+.stats ul {
+    text-align: center; 
+
+  }
+/* ============================= */
+
+.stats li {
+      display: inline-block;
+      width: 220px;
+      position: relative;
+      margin: 0 30px;
+
+}
+/* ============================= */
+
+.stats ul li p {
+  font-size: 30px;
+  font-weight: normal;
+  font-family: 'RobotoNormal';
+  display: block;
+  position: relative;
+  color: #333333;
+  text-align: center;
+  margin: 5px;
+ 
+}
+/* ============================= */
+
+.miles:after {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: 'RobotoNormal';
+  content: 'MI';
+  position: absolute;
+  top: 8px;
+   
+}
+  /* ============================= */
+
+  .model {
+    text-align: center;
+    
+   }
+   

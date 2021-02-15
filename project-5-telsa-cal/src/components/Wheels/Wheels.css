@@ -1,0 +1,57 @@
+.wheels__component {
+  float: left;
+  width: 325px;
+}
+.wheels__title {
+  letter-spacing: 3px;
+    font-size: 14px;
+    margin: 5px 0 0 10px; 
+
+}
+.wheels__container {
+  margin: 10px 0 0;
+
+}
+.wheelsItem {
+  cursor: pointer;
+  width: 47%;
+  height: 65px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 20px 0 0 90px;
+  margin: 0 8px 0 0;
+  background-color: #999;
+  background-position: 18% 7px;
+  background-repeat: no-repeat;
+  background-size: 45px;
+  box-shadow: 0px 1px 4px rgba(204, 204, 204, 1);
+  border-radius: 5px;
+  border: 1px solid black;
+
+}
+.wheelsItem--19 {
+  background-image: url(../../assets/Wheels/19.svg);
+}
+.wheelsItem--21 {
+  background-image: url(../../assets/Wheels/21.svg);
+}
+/* .wheelsItem--focused {
+  background-color: #f2f2f2;
+} */
+.wheelsItem--active {
+  border-color: #cc0000;
+  box-shadow: inset 0px 0px 0px 1px #cc0000;
+}
+.wheelsItem p {
+  font-family: 'RobotoNormal';
+  font-size: 26px;
+  font-weight: 400;
+  color: black;
+  margin-top: -7px;
+  text-align: center;
+
+}
+.wheelsItem input[type=radio] {
+  clip: rect(0 0 0 0);
+  position: absolute;
+}

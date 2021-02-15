@@ -1,0 +1,102 @@
+.climate {
+  float: left; 
+  margin-top: 10px;
+}
+ /* ============================= */
+  .climateItem {
+    cursor: pointer;
+    display: block;
+    width: 105px;
+    height: 105px;
+    border: 4px solid #cccccc;
+    border-radius: 35%;
+    box-shadow: 1px 5px 8px rgba(51, 51, 51, 1);
+    color: #666;
+    background: #fff;
+  }
+   /* ============================= */
+    .climateItemActive {
+      color: #ffffff;
+      background: -moz-linear-gradient(top, #1B2F5A 0%, #388bff 100%);
+      background: -webkit-linear-gradient(top, #1B2F5A 0%, #388bff 100%);
+      background: linear-gradient(to bottom, #1B2F5A 0%, #388bff 100%); 
+    }
+     /* ============================= */
+      .climateItemActive.heat {
+        background: -moz-linear-gradient(top, #cc0000 0%, #cc0000 100%);
+        background: -webkit-linear-gradient(top, #cc0000 0%, #cc0000 100%);
+        background: linear-gradient(to bottom, #cc0000 0%, #cc0000 100%); 
+      }
+       /* ============================= */
+  .climateIcon {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 8px auto;    background-position: center;
+    background-image: url(../../assets/climate/ac-off.svg); 
+  }
+   /* ============================= */
+   .climateIconActive.ac {
+     
+    -webkit-animation: infinite-spinning 450ms steps(20) infinite;
+    -moz-animation: infinite-spinning 450ms steps(20) infinite;
+    -o-animation: infinite-spinning 450ms steps(20) infinite;
+    animation: infinite-spinning 450ms steps(20) infinite; 
+  }
+   /* ============================= */
+    .heat .climateIcon {
+      background-image: url(../../assets/climate/heat-off.svg); 
+    }
+     /* ============================= */
+    .climateItemActive .climateIcon {
+      background-image: url(../../assets/climate/ac-on.svg); 
+    }
+     /* ============================= */
+    .climateItemActive.heat .climateIcon {
+      background-image: url(../../assets/climate/heat-on.svg); 
+    }
+     /* ============================= */
+  .climate p {
+    margin: 14px 0 0;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase; 
+  }
+   /* ============================= */
+  .climate input[type=checkbox] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; 
+  }
+   /* ============================= */
+   @keyframes infinite-spinning {
+    from {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); }
+    to {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg); } }
+  @-webkit-keyframes infinite-spinning {
+    from {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); }
+    to {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg); } }
