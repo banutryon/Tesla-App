@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { StyleSheet, Text, View, SafeAreaView, ImageBackground, Image} from 'react-native';
 import styles from './styles';
 import PropTypes from 'prop-types';
+import nineteen from '../../assets/Wheels/wheel-19.png';
+import twentyone from '../../assets/Wheels/wheel-21.png';
 
 const TeslaCar = (props) => {
       TeslaCar.propTypes = {

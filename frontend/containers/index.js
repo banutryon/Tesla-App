@@ -93,7 +93,7 @@ const BatteryContainer = (props) => {
         const handleChangeClimate = () => {
             const config_ = {...config};
             config_['climate'] = !config_.climate;
-            setState({ config_ }, () => {statsUpdate()});
+            set({ config_ }, () => {statsUpdate()});
           };
         
           // handle Wheels click event handler

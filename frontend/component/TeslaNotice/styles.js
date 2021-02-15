@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         marginRight: 20,
         position: 'relative',
-        bottom: 0,
+        
       }
       
 });
