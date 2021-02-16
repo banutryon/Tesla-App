@@ -9,6 +9,15 @@
     padding-top: 10px;
 } 
 
+/* Stage */
+.img {
+  margin-top: -25px;
+  height: 450px;
+  width: 100%;
+  position:absolute;
+  z-index: -1;
+}
+/* Tesla Car */
 .tesla {
   width: 1000px;
   min-height: 350px;
@@ -20,14 +29,6 @@
   animation: 1s ease-out 0s 1 slideInFromRight;
   /* background-image: url(../../assets/Images/ModelS.png); */
 }
-.img {
-  margin-top: -25px;
-  height: 450px;
-  width: 100%;
-  position:absolute;
-  z-index: -1;
-}
-
 
 .tesla-wheels {
   height: 50px;

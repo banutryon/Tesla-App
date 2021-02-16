@@ -6,7 +6,7 @@ import Stats from '../components/Stats/Stats';
 import Counter from '../components/Counter/Counter';
 import Climate from '../components/Climate/Climate';
 import Wheels from '../components/Wheels/Wheels';
-import { getData } from '../services/BatteryService';
+import { getData } from '../services/BatteryPackages';
 
 class TeslaBattery extends React.Component {
   constructor(props) {
@@ -24,11 +24,10 @@ class TeslaBattery extends React.Component {
     this.state = {
       carstats: [],
       config: {
-        speed: 50,
-        temperature: 65,
-        climate: true,
+        speed: 45,
+        temperature: 80,
+        climate: false,
         wheels: 19,
-        model: ''
       }
     }
   }
@@ -36,7 +35,7 @@ class TeslaBattery extends React.Component {
   calculateStats = (models, value) => {
     const dataModels = getData();
     return models.map(model => {
-      const { speed, temperature, climate, wheels } = value;
+      const { speed, temperature, climate, wheels, } = value;
       const miles = dataModels[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature];
       return {
         model,
@@ -121,7 +120,7 @@ class TeslaBattery extends React.Component {
   // handle Telsa click event handler
   handleChangeTesla(car) {
     const config = {...this.state.config};
-    config['model'] = !this.state.config.model;
+    config['models'] = car;
     this.setState({ config }, () => {this.statsUpdate()});
   }   
 
