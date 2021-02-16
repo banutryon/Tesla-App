@@ -3,9 +3,9 @@ import './Wheels.css';
 
 const LabelLists = (props) => {
   const value = props.wheels.value;
-  const changeHandler = props.wheels.handleChangeWheels;
+  const changeHandler = props.wheels.ChangeWheels;
   const sizes = [19, 21];
-  const LabelItems = sizes.map(size => (
+  const LabelWheels = sizes.map(size => (
     <label key={size} className={`wheelsItem wheelsItem--${size} ${value === size ? 'wheelsItem--active' : '' }`}>
       <input
         type="radio"
@@ -21,7 +21,7 @@ const LabelLists = (props) => {
   );
   return (
     <div>
-      {LabelItems}
+      {LabelWheels}
     </div>
   );
 }

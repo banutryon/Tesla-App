@@ -217,7 +217,7 @@ export function getData()
       }
     },
     
-    Plaid:{
+    'Plaid':{
       19: {
         on: {
           speed: {
@@ -432,7 +432,7 @@ export function getData()
       }
     },
     
-    'Plaid+':{
+    'Plaid+' :{
       19: {
           on: {
               speed: {

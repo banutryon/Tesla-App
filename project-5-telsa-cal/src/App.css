@@ -1,1 +1,43 @@
 
+* {
+    box-sizing: border-box;
+  }
+  .tesla-battery {
+    width: 100%;
+    margin: 0 auto;
+
+
+  }
+  
+    
+  
+  .tesla-climate-container {
+    float: left;
+    width: 420px;
+    height: 150px;
+    padding: 0 40px;
+    margin: 0 40px 0 0;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+  
+  }
+  .controlsContainer {
+    display: block;
+    width: 85vw;
+    height: 130px;
+    margin: -30px auto 10px auto;
+    
+  }
+
+  .tesla-controls {
+    
+    height: 200px;
+    margin: -50px 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+ 
+ 
+  

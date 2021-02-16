@@ -1,18 +1,21 @@
 .climate {
   float: left; 
-  margin-top: 10px;
+  margin-top: 20px;
+
 }
  /* ============================= */
   .climateItem {
     cursor: pointer;
     display: block;
-    width: 105px;
-    height: 105px;
+    width: 150px;
+    height: 150px;
     border: 4px solid #cccccc;
-    border-radius: 35%;
+    border-radius: 50%;
     box-shadow: 1px 5px 8px rgba(51, 51, 51, 1);
     color: #666;
     background: #fff;
+    margin: 0 0 0 140px;
+
   }
    /* ============================= */
     .climateItemActive {
@@ -30,9 +33,10 @@
        /* ============================= */
   .climateIcon {
     display: block;
-    width: 35px;
-    height: 35px;
-    margin: 8px auto;    background-position: center;
+    width: 70px;
+    height: 70px;
+    margin: 8px auto;    
+    background-position: center;
     background-image: url(../../assets/climate/ac-off.svg); 
   }
    /* ============================= */
@@ -57,9 +61,9 @@
     }
      /* ============================= */
   .climate p {
-    margin: 14px 0 0;
+    margin: 15px 0 0;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase; 
   }
    /* ============================= */

@@ -11,41 +11,40 @@
 
 /* Stage */
 .img {
-  margin-top: -25px;
-  height: 450px;
+  margin-top: -110px;
+  height: 600px;
   width: 100%;
   position:absolute;
   z-index: -1;
 }
 /* Tesla Car */
 .tesla {
-  width: 1150px;
+  width: 1000px;
   min-height: 500px;
   background: url(../../assets/Images/BlackModelS.png) no-repeat top center;
   background-size: contain;
   background-position: center;
   display: block;
-  margin: -120px auto 0 auto;
+  margin: -60px auto 0 auto;
   animation: 1s ease-out 0s 1 slideInFromRight;
   /* background-image: url(../../assets/Images/ModelS.png); */
 }
 
 .tesla-wheels {
-  height: 50px;
-  width: 600px;
+  width: 540px;
   position: relative;
   margin: 0 auto; 
 }
 
 .wheel {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   position: absolute;
   background-size: cover;
-  margin-top: 315px; 
+  margin-top: 305px; 
 }
   .front {
-    left: 13px; }
+    left: 18px; }
   .rear {
     right: 48px; }
   .wheel--19 {
@@ -97,7 +96,7 @@
         margin-left: 100%;
     }
     to {
-        margin-left: 2%;  
+        margin-left: 22%;  
     }
     }
     

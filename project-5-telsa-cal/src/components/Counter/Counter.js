@@ -1,24 +1,28 @@
 import React from 'react';
 import './Counter.css';
 
-const TeslaCounter = (props) => (
+const Counter = ({ initValues, currentValue, increment, decrement }) => (
   <div className="counter">
-    <p className="counterTitle">{props.initValues.title}</p>
+    <p className="counterTitle">{initValues.title}</p>
     <div className="counterContainer cf">
       <div className="counterItem">
         <p className="counterNumber">
-          { props.currentValue }
-          <span>{ props.initValues.unit }</span>
+          { currentValue }
+          <span>{ initValues.unit }</span>
         </p>
         <div className="counterControls">
           <button 
-            onClick={(e) => props.increment(e, props.initValues.title)} 
-            disabled={props.currentValue >= props.initValues.max} 
+            onClick={(e) => {
+              e.preventDefault();
+              increment(currentValue)}}            
+              disabled={currentValue >= initValues.max} 
           >
           </button>
           <button 
-            onClick={(e) => props.decrement(e, props.initValues.title)} 
-            disabled={props.currentValue <= props.initValues.min} 
+            onClick={(e) => {
+              e.preventDefault();
+              decrement(currentValue)}}            
+              disabled={currentValue <= initValues.min} 
           >
           </button>
         </div>
@@ -34,4 +38,4 @@ const TeslaCounter = (props) => (
 //   initValues: React.PropTypes.object
 // }
 
-export default TeslaCounter;
+export default Counter;

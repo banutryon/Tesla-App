@@ -1,4 +1,4 @@
-import { defaultValue } from '../constants/defaultValue';
+import { defaultVal } from '../constants/defaultVal';
 
 
 // ========Action Creators======================
@@ -7,16 +7,16 @@ export const speedUp = (value) => {
   return {
     type: 'SPEED_UP',
     value,
-    step: defaultValue.speed.step,
-    maxValue: defaultValue.speed.max
+    step: defaultVal.speed.step,
+    maxValue: defaultVal.speed.max
   }
 }
 export const speedDown = (value) => {
   return {
     type: 'SPEED_DOWN',
     value,
-    step: defaultValue.speed.step,
-    minValue: defaultValue.speed.min
+    step: defaultVal.speed.step,
+    minValue: defaultVal.speed.min
   }
 }
 // ========Change Temperature/ state and action needed ======================
@@ -25,16 +25,16 @@ export const temperatureUp = (value) => {
   return {
     type: 'TEMPERATURE_UP',
     value,
-    step: defaultValue.temperature.step,
-    maxValue: defaultValue.temperature.max
+    step: defaultVal.temperature.step,
+    maxValue: defaultVal.temperature.max
   }
 }
 export const temperatureDown = (value) => {
   return {
     type: 'TEMPERATURE_DOWN',
     value,
-    step: defaultValue.temperature.step,
-    minValue: defaultValue.temperature.min
+    step: defaultVal.temperature.step,
+    minValue: defaultVal.temperature.min
   }
 }
 // ========Change Climate/ only action needed======================
