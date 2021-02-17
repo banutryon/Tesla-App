@@ -2,14 +2,14 @@ import React from 'react';
 import {View, Image, Text, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import AcOff from '../../assets/climate/ac-off.svg';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 const Climate = (props) => {
-    Climate.propTypes = {
-        value: PropTypes.bool,
-        limit: PropTypes.bool,
-        handleChangeClimate: PropTypes.func
-      }
+    // Climate.propTypes = {
+    //     value: PropTypes.bool,
+    //     limit: PropTypes.bool,
+    //     handleChangeClimate: PropTypes.func
+    //   }
 
     return (
         <View style={styles.container}>

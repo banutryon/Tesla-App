@@ -7,7 +7,7 @@ router.post('/', (req, res) => {
 
     const tesla = new Tesla({
         models: req.body.models,
-        config: req.body.config
+        // config: req.body.config
         // id: req.body.id,
         // model: req.body.model,
         // battery: req.body.battery,
