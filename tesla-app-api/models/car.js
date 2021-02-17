@@ -661,7 +661,7 @@ const teslaSchema = new mongoose.Schema({
       },
     },
   },
-}]
+  }]
   
 })
 

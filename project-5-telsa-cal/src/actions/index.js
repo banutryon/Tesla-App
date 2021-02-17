@@ -2,6 +2,16 @@ import { defaultVal } from '../constants/defaultVal';
 
 
 // ========Action Creators======================
+
+
+//==============  Fetching data==================
+export const FETCH_DATA = "REQUEST_TESLA_DATA"
+export const RECEIVE_DATA = "RECEIVE_TESLA_DATA"
+
+
+
+
+
 // ========Change Speed/ state and action needed ======================
 export const speedUp = (value) => {
   return {

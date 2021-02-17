@@ -12,7 +12,7 @@
 /* Stage */
 .img {
   margin-top: -110px;
-  height: 600px;
+  height: 550px;
   width: 100%;
   position:absolute;
   z-index: -1;
@@ -25,7 +25,7 @@
   background-size: contain;
   background-position: center;
   display: block;
-  margin: -60px auto 0 auto;
+  margin: -90px auto 0 auto;
   animation: 1s ease-out 0s 1 slideInFromRight;
   /* background-image: url(../../assets/Images/ModelS.png); */
 }

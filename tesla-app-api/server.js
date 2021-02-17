@@ -3,7 +3,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const teslas = require('./controllers/routes')
-
+const cors = require('cors')
 // CONFIGURATION
 const app = express()
 const db = mongoose.connection
@@ -22,6 +22,7 @@ db.on('error', (err) => console.log(err.message + ' is Mongod not running?'))
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI))
 db.on('disconnected', () => console.log('mongo disconnected'))
 // MIDDLEWARE
+app.use(cors())
 app.use(express.json())
 app.get('/', (req, res) => {
   res.send('Welcome to the Tesla battery app API');

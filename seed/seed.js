@@ -1,28 +1,28 @@
 {
-"models": [ 
-    {
-    "id": "1",
-    "model": "S",
-    "battery": "Long Range",
-    "ETArange": "263",
-    "configId": "1"
-    },
-    {
-    "id": "2",
-    "model": "S",
-    "battery": "Plaid ",
-    "ETArange": "353",
-    "configId": "2"
-    },
-    {
-    "id": "3",
-    "model": "S",
-    "battery": "Plaid +",
-    "ETArange": "520",
-    "configId": "3"
-    }
-    ]
-}
+// "models": [ 
+//     {
+//     "id": "1",
+//     "model": "S",
+//     "battery": "Long Range",
+//     "ETArange": "263",
+//     "configId": "1"
+//     },
+//     {
+//     "id": "2",
+//     "model": "S",
+//     "battery": "Plaid ",
+//     "ETArange": "353",
+//     "configId": "2"
+//     },
+//     {
+//     "id": "3",
+//     "model": "S",
+//     "battery": "Plaid +",
+//     "ETArange": "520",
+//     "configId": "3"
+//     }
+//     ]
+// }
 {
   "models": [ {
     "LongRange": {

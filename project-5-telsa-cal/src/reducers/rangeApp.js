@@ -1,11 +1,12 @@
 import { getData } from '../services/BatteryPackages';
-
+// import { getData } from 'https://tesla-app-api.herokuapp.com/api/tesla-info';
+// import {RECEIVE_DATA, FETCH_DATA} from '../actions';
 //====== setting initialState from tesla API on load
 const initialState = {
     carstats:[
       {miles:412, model:"LongRange"},
       {miles:390, model:"Plaid"},
-      {miles:520, model:"Plaid+"}
+      {miles:520, model:"PlaidPlus"}
     ],
     config: {
         speed: 45,
@@ -14,29 +15,59 @@ const initialState = {
         wheels: 19,
       }
   }
+
+
+
+// ==========Fetching Data=================
+
+function calculateStats(state) {
+   
+        const req = new XMLHttpRequest();
+
+        req.open("GET", 'http://localhost:3005/api/tesla-info', false)
+        req.send();
+  
+        const data = JSON.parse(req.responseText)
+        console.log(data)
+      
+        const models = ['LongRange', 'Plaid', 'PlaidPlus'];
+        // const dataModels = getata();
+        state.carstats = models.map(model => {
+            const { speed, temperature, climate, wheels } = state.config;
+            const miles = data[0].models[0][model][wheels][climate ? 'On' : 'Off'].speed[speed][temperature];
+            return {
+            model,
+            miles
+            
+            };
+            
+        });
+    
+}
 // ==========New Carstats state=================
 function updateStats(state, newState) {
+    calculateStats(newState)
     return {
         ...state,
-        carstats: calculateStats(newState),
+        carstats: newState.carstats, 
         config: newState.config,
         
     }
 }
 // ==========Calculate state=================
 
-function calculateStats(state) {
-    const models = ['LongRange', 'Plaid', 'Plaid+'];
-    const dataModels = getData();
-    return models.map(model => {
-        const { speed, temperature, climate, wheels, } = state.config;
-        const miles = dataModels[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature];
-        return {
-          model,
-          miles
-        };
-    });
-}
+// function calculateStats(state) {
+//     const models = ['LongRange', 'Plaid', 'Plaid+'];
+//     const dataModels = getData();
+//     return models.map(model => {
+//         const { speed, temperature, climate, wheels } = state.config;
+//         const miles = dataModels[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature];
+//         return {
+//           model,
+//           miles
+//         };
+//     });
+// }
 // =============Reducers======================
   function appReducer(state = initialState, action) {
     switch (action.type) {
