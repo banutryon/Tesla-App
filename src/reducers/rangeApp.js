@@ -24,7 +24,7 @@ function calculateStats(state) {
    
         const req = new XMLHttpRequest();
 
-        req.open("GET", 'http://localhost:3005/api/tesla-info', false)
+        req.open("GET", 'https://tesla-app-api.herokuapp.com/api/tesla-info', false)
         req.send();
   
         const data = JSON.parse(req.responseText)
