@@ -77,6 +77,36 @@
     position: absolute;
     width: 1px; 
   }
+
+
+  @media only screen and (max-width: 1024px) {
+  .climate {
+    margin-top: 50px;
+
+  }
+
+   /* ============================= */
+  .climateItem {
+    
+    width: 100px;
+    height: 100px;
+    border: 3px solid #cccccc;
+    margin:0px;
+  }
+
+ 
+   /* ============================= */
+  .climateIcon {
+    width: 50px;
+  height: 50px;
+    margin: 4px auto;
+}
+   /* ============================= */
+  .climate p {
+    font-size: 12px;
+  }  
+
+  }
    /* ============================= */
    @keyframes infinite-spinning {
     from {

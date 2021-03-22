@@ -1,7 +1,6 @@
 .wheels__component {
   float: left;
   width: 30vw;
-
 }
 .wheels__title {
   letter-spacing: 3px;
@@ -60,3 +59,44 @@
   clip: rect(0 0 0 0);
   position: absolute;
 }
+
+  @media only screen and (max-width: 1024px) {
+.wheels__component {
+  float: left;
+  margin: 250px 0 0 -25px;
+  width: 30vw;
+}
+
+.wheels__title {
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-top: 5px;
+
+}
+
+.wheels__container {
+  margin-top: 5px;
+  width: 220px;
+}
+
+.wheelsItem {
+  width: 70px;
+  height: 50px;
+  padding-left: 40px;
+  margin: 0 10px 0 0;
+}
+
+.wheelsItem--19 {
+  background-size: 35px;
+}
+
+.wheelsItem--21 {
+  background-size: 32px;
+
+}
+.wheelsItem p {
+  font-family: 'RobotoNormal';
+  font-size: 16px;
+}
+
+  }

@@ -27,7 +27,7 @@
   color: #333333;
   text-align: center;
   margin: 5px;
- 
+
 }
 /* ============================= */
 
@@ -38,12 +38,55 @@
   content: 'MI';
   position: absolute;
   top: 8px;
-   
+  
 }
   /* ============================= */
 
   .model {
     text-align: center;
     
-   }
-   
+  }
+  
+    @media only screen and (max-width: 1024px) {
+    .stats {
+      margin: 10px 0 20px 0;
+    }
+    .stats ul {
+      padding: 0;
+
+    }
+    /* ============================= */
+
+    .stats li {
+      display: inline-block;
+      width: 100px;
+      position: relative;
+      margin: 0 10px;
+
+    }
+
+     /* ============================= */
+
+    .stats ul li p {
+      font-size: 18px;
+      font-weight: normal;
+      font-family: 'RobotoNormal';
+      display: block;
+      position: relative;
+      color: #333333;
+      text-align: center;
+      margin: 5px 0;
+
+
+    }
+
+     /* ============================= */
+
+    .miles:after {
+      font-size: 8px;
+      top: 10px;
+    }
+    }
+
+
+    

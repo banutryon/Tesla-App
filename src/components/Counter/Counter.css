@@ -98,3 +98,75 @@
       }
       /* ============================= */
 
+        @media only screen and (max-width: 1024px) {
+.counter {
+  float: left;
+  width: 80px;
+  margin: 250px 50px 0 -50px;
+}
+
+/* ============================= */
+.counterTitle {
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin: 5px 0 0 10px;
+  width: 170px;
+
+}
+
+/* ============================= */
+.counterContainer {
+  margin: 5px 0 0px 15px;
+  width: 70px;
+    border: 1px solid rgb(0, 81, 255);
+
+
+}
+
+/* ============================= */
+
+.counterNumber {
+  font-size: 16px;
+  line-height: 0px;
+  position: relative;
+  margin: 8px 0 0 1px;
+  width: 5px;
+}
+
+/* ============================= */
+
+.counterNumber span {
+  left: 18px;
+  padding-left: 0px;
+  font-size: 9px;
+}
+
+/* ============================= */
+
+.counterItem {
+  width: 70px;
+  height: 50px;
+  padding: 18px 0 0 28px;
+  margin-right:5px;
+}
+
+
+/* ============================= */
+
+.counterControls {
+  position: absolute;
+  right: 45px;
+  top: 3px;
+
+}
+
+/* ============================= */
+
+.counterControls button {
+  width: 20px;
+  padding: 8px 2px;
+  margin: 2px;
+}
+
+
+        }
