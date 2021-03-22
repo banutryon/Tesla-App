@@ -102,7 +102,7 @@
 .counter {
   float: left;
   width: 80px;
-  margin: 250px 50px 0 -50px;
+  margin: 210px 55px 0 -55px;
 }
 
 /* ============================= */
@@ -110,7 +110,7 @@
   letter-spacing: 2px;
   font-size: 12px;
   margin: 5px 0 0 10px;
-  width: 170px;
+  width: 70px;
 
 }
 

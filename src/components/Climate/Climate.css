@@ -39,9 +39,8 @@
     background-position: center;
     background-image: url(../../assets/climate/ac-off.svg); 
   }
-   /* ============================= */
-   .climateIconActive.ac {
-     
+  /* ============================= */
+  .climateIconActive.ac {
     -webkit-animation: infinite-spinning 450ms steps(20) infinite;
     -moz-animation: infinite-spinning 450ms steps(20) infinite;
     -o-animation: infinite-spinning 450ms steps(20) infinite;
@@ -81,7 +80,7 @@
 
   @media only screen and (max-width: 1024px) {
   .climate {
-    margin-top: 50px;
+    margin-top: 10px;
 
   }
 
@@ -98,7 +97,7 @@
    /* ============================= */
   .climateIcon {
     width: 50px;
-  height: 50px;
+    height: 50px;
     margin: 4px auto;
 }
    /* ============================= */
@@ -108,7 +107,7 @@
 
   }
    /* ============================= */
-   @keyframes infinite-spinning {
+  @keyframes infinite-spinning {
     from {
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
