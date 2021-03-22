@@ -101,8 +101,8 @@
         @media only screen and (max-width: 1024px) {
 .counter {
   float: left;
-  width: 80px;
-  margin: 210px 55px 0 -55px;
+  width: 100px;
+  margin: 210px 35px 0 -50px;
 }
 
 /* ============================= */
@@ -116,10 +116,9 @@
 
 /* ============================= */
 .counterContainer {
-  margin: 5px 0 0px 15px;
-  width: 70px;
-    border: 1px solid rgb(0, 81, 255);
-
+  margin: 5px 0 0px 20px;
+  width: 82.8px;
+  border: 1px solid black;
 
 }
 
@@ -129,7 +128,7 @@
   font-size: 16px;
   line-height: 0px;
   position: relative;
-  margin: 8px 0 0 1px;
+  margin: 8px 0 0 10px;
   width: 5px;
 }
 
@@ -144,8 +143,8 @@
 /* ============================= */
 
 .counterItem {
-  width: 70px;
-  height: 50px;
+  width: 80px;
+  height: 60px;
   padding: 18px 0 0 28px;
   margin-right:5px;
 }
@@ -163,8 +162,8 @@
 /* ============================= */
 
 .counterControls button {
-  width: 20px;
-  padding: 8px 2px;
+  width: 30px;
+  padding: 10px 8px;
   margin: 2px;
 }
 
