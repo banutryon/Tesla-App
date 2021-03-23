@@ -4,7 +4,7 @@ import "./Notice.css";
 const TeslaNotice = () => (
 	<div>
 		<p className="notice">
-			This app provides you a basic idea of how much rang you will get with
+			This app provides you a basic idea of how much range you will get with
 			these conditions. May other factors apply and could effect your actual
 			range. Please see how your particular model may affect your range in our
 			simulation model. This project was a great way to learn React with Redux
